@@ -1,0 +1,164 @@
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table; }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333333; }
+
+.welcome_bar {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 16px;
+  align-items: center;
+  justify-content: center; }
+  .welcome_bar p {
+    margin-top: 14px; }
+  .welcome_bar #welcome_drop_down_btn {
+    font-size: 1.3em;
+    padding: 10px;
+    box-sizing: border-box;
+    fill: #333333; }
+    .welcome_bar #welcome_drop_down_btn:hover {
+      cursor: pointer; }
+    .welcome_bar #welcome_drop_down_btn.open {
+      transform: rotate(180deg); }
+  .welcome_bar .popOver {
+    display: none;
+    background: #444;
+    position: absolute;
+    right: 12px;
+    top: 40px;
+    z-index: 100; }
+    .welcome_bar .popOver li {
+      list-style: none;
+      padding: 10px; }
+      .welcome_bar .popOver li:hover {
+        background: rgba(255, 255, 255, 0.2); }
+      .welcome_bar .popOver li a {
+        text-decoration: none;
+        color: white; }
+    .welcome_bar .popOver.popOver_open {
+      display: block; }
+
+.content {
+  display: flex; }
+
+.drawer {
+  position: relative;
+  font-weight: normal;
+  height: 100vh;
+  display: block;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  flex-basis: 350px; }
+  .drawer.drawer_collapse {
+    flex-basis: 0px; }
+    .drawer.drawer_collapse li {
+      padding-right: 16px; }
+      .drawer.drawer_collapse li a {
+        display: none; }
+  .drawer #drawer_icon {
+    font-size: 1.5em;
+    color: grey;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    box-sizing: border-box; }
+    .drawer #drawer_icon:hover {
+      cursor: pointer; }
+  .drawer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-top: 58px; }
+  .drawer li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    padding-right: 48px;
+    box-sizing: border-box;
+    position: relative; }
+    .drawer li::after {
+      display: inline-block;
+      content: "";
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: rgba(51, 51, 51, 0.1); }
+    .drawer li a {
+      text-decoration: none;
+      color: #333333;
+      padding-left: 10px; }
+    .drawer li:hover {
+      cursor: pointer;
+      background: rgba(154, 0, 0, 0.2); }
+  .drawer .drawer_item_icon {
+    font-size: 1.4em;
+    text-align: center;
+    width: 24px;
+    height: 24px;
+    color: #9a0000; }
+  .drawer .item_selected {
+    background: rgba(154, 0, 0, 0.1); }
+
+.main_content {
+  width: 100%; }
+  .main_content h1 {
+    font-weight: lighter;
+    text-align: center;
+    margin-left: 24px;
+    margin-top: 128px; }
+
+.patient_dashboard {
+  width: 100%;
+  padding: 16px;
+  display: flex; }
+  .patient_dashboard .cards {
+    align-self: center;
+    flex-basis: 600px;
+    margin: 24px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+  .patient_dashboard .card {
+    margin: 4px;
+    width: 180px;
+    height: 150px;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid rgba(51, 51, 51, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; }
+    .patient_dashboard .card:hover {
+      background: rgba(154, 0, 0, 0.2);
+      cursor: pointer; }
+    .patient_dashboard .card .card_icon {
+      color: #9a0000;
+      font-size: 3em;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .patient_dashboard .card a {
+      padding-top: 1.1em;
+      text-decoration: none;
+      font-size: 1.3em;
+      line-height: 1em;
+      font-weight: lighter;
+      color: #333333;
+      text-align: center; }
+
+/*# sourceMappingURL=main.css.map */
